@@ -22,6 +22,7 @@ export class AppComponent implements OnInit {
   // is opened via the auth0 redirect uri
   isAuth0Loading$ = new BehaviorSubject<boolean>(false);
 
+
   ngOnInit(): void {
     // Use Capacitor's App plugin to subscribe to the `appUrlOpen` event
     App.addListener('appUrlOpen', ({ url }) => {
