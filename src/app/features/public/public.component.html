@@ -1,0 +1,20 @@
+<app-page-layout>
+  <div class="content-layout">
+    <ion-text><h1 id="page-title" class="content__title">Public Page</h1></ion-text>
+    <div class="content__body">
+      <ion-text>
+        <p id="page-description">
+          <span
+            >This page retrieves a <strong>public message</strong> from an
+            external API.</span
+          >
+          <span><strong>Any visitor can access this page.</strong></span>
+        </p>
+      </ion-text>
+      <app-code-snippet
+        title="Public Message"
+        [code]="message"
+      ></app-code-snippet>
+    </div>
+  </div>
+</app-page-layout>

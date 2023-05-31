@@ -1,17 +1,54 @@
-# Ionic/TypeScript: Security and Identity Management
+# Ionic Angular/TypeScript: Starter Mobile App Code Sample
 
-Visit the ["Ionic/TypeScript Code Samples: App Security in Action"](https://auth0.com/developers/hub/code-samples/mobile/ionic-typescript) section of the ["Auth0 Developer Hub"](https://auth0.com/developers/hub) to explore how you can secure Ionic applications written in TypeScript by implementing user authentication with Auth0.
+This TypeScript code sample demonstrates how to build mobile applications using Ionic.
 
-[![Ionic/TypeScript Code Samples: App Security in Action](https://cdn.auth0.com/blog/hub/code-samples/mobile/ionic-typescript.png)](https://auth0.com/developers/hub/code-samples/mobile/ionic-typescript)
-
-## Basic User Authentication Code Sample
-
-This TypeScript code sample demonstrates **how to implement user authentication** in Ionic mobile applications using Auth0. This Ionic code sample builds the mobile application using the Angular Framework.
-
-Visit the ["Ionic/TypeScript + Angular Code Sample: User Authentication For Basic Apps"](https://auth0.com/developers/hub/code-samples/mobile/ionic/basic-authentication) page for instructions on how to configure and run this code sample.
-
-
+Visit the ["Ionic Angular/TypeScript Code Samples: Mobile App Security in Action"](https://developer.auth0.com/resources/code-samples/mobile/ionic) section of the ["Auth0 Developer Resources"](https://developer.auth0.com/resources) to explore how you can secure Ionic Angular applications written in TypeScript by implementing endpoint protection and authorization with Auth0.
 
 ## Why Use Auth0?
 
-Auth0 is a flexible drop-in solution to add authentication and authorization services to your applications. Your team and organization can avoid the cost, time, and risk that come with building your own solution to authenticate and authorize users. We offer tons of guidance and SDKs for you to get started and [integrate Auth0 into your stack easily](https://auth0.com/developers/hub/code-samples/full-stack).
+Auth0 is a flexible drop-in solution to add authentication and authorization services to your applications. Your team and organization can avoid the cost, time, and risk that come with building your own solution to authenticate and authorize users. We offer tons of guidance and SDKs for you to get started and [integrate Auth0 into your stack easily](https://developer.auth0.com/resources/code-samples/full-stack).
+
+## Set Up and Run the Ionic Angular Project
+
+Install the project dependencies:
+
+```bash
+npm install
+```
+
+The starter Ionic Angular project offers a functional application that consumes data from an external API to hydrate the user interface. For simplicity and convenience, the starter project simulates the external API locally using [`json-server`](https://github.com/typicode/json-server).
+
+However, you can also integrate this starter project with any of the ["Hello World" API code samples, which are available in multiple backend frameworks and programming languages](https://github.com/orgs/auth0-developer-hub/repositories?language=&q=api+hello-world&sort=&type=public).
+
+The compatible API server runs on `http://localhost:6060` by default. As such, to connect your Angular application with that API server, create a `.env` file under the root project directory and populate it with the following environment variables:
+
+```bash
+API_SERVER_URL=http://localhost:6060
+#API_SERVER_URL=http://10.0.2.2:6060 if you are using Android
+```
+
+Next, execute the following command to run the JSON server API:
+
+```bash
+npm run api
+```
+
+Finally, open another terminal tab and execute this command to build your Ionic Angular application:
+
+```bash
+npm run build
+```
+
+Execute the following command to run the application on Android:
+
+```bash
+npx cap run android
+```
+
+And the following command to run the application on iOS:
+
+```bash
+npx cap run ios
+```
+
+In the starter project, all the starter Ionic Angular application routes are public. However, you can use Auth0 to get an ID token to hydrate the user profile information present on the `/profile` page with information from a real user. With Auth0, you can also get an access token to make a secure call to an external API to hydrate the messages present in the `/protected` and `/admin` pages.

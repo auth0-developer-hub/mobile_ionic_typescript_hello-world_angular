@@ -1,0 +1,152 @@
+.button__hero {
+  border: 0;
+  border-radius: 0.8rem;
+
+  font-family: var(--font-primary);
+  font-weight: 600;
+  color: var(--white);
+
+  cursor: pointer;
+  user-select: none;
+
+  transition: background 0.3s ease-out, color 0.3s ease-out;
+
+  /* responsive */
+
+  min-width: 10rem;
+  padding: 1.6rem 1.6rem;
+
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
+.button--compact {
+  /* responsive */
+
+  padding: 1rem 1.6rem;
+
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+}
+
+.button--primary {
+  background-color: var(--indigo);
+}
+
+.button--primary:hover {
+  background: rgba(99, 93, 255, 0.85);
+}
+
+.button--secondary {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.button--secondary:hover {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+@media only screen and (max-width: 480px) {
+  .button {
+    /* responsive */
+
+    --min-width: 0.8rem;
+    --padding: 1rem 1.2rem;
+
+    --font-size: 1.3rem;
+    --line-height: 2.2rem;
+  }
+
+  .button--compact {
+    /* responsive */
+
+    padding: 0.6rem 1rem;
+
+    font-size: 1.3rem;
+    line-height: 2rem;
+  }
+
+.button__login,
+.button__logout,
+.button__sign-up {
+  min-width: 14.4rem;
+}
+}
+
+.button__login,
+.button__logout {
+  --border-width: 0.1rem;
+  --border-style: solid;
+  --border-color: var(--indigo);
+  --color: var(--white);
+  --background: var(--indigo);
+  --background-hover: var(--indigo);
+  --background-activated: var(--indigo);
+  --background-focused: var(--indigo);
+  --padding-top: 1.4rem;
+  --padding-bottom: 1.4rem;
+  --border-radius: 0.8rem;
+  font-size: 1.6rem;
+  width: 100%;
+  height: 100%;
+  min-width: 14.4rem;
+  font-family: var(--font-primary);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 3.2rem;
+  margin: 0;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+
+  --transition: background 0.3s ease-out, color 0.3s ease-out;
+}
+
+.button__sign-up {
+  --border-width: 0.1rem;
+  --border-style: solid;
+  --border-color: var(--white);
+  --color: var(--white);
+  --background: transparent;
+  --background-hover: transparent;
+  --background-activated: transparent;
+  --background-focused: transparent;
+  --padding-top: 1.4rem;
+  --padding-bottom: 1.4rem;
+  --border-radius: 0.8rem;
+  font-size: 1.6rem;
+  width: 100%;
+  height: 100%;
+  min-width: 14.4rem;
+  font-family: var(--font-primary);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 3.2rem;
+  margin: 0;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+
+  --transition: background 0.3s ease-out, color 0.3s ease-out;
+}
+
+.button__login:last-child,
+.button__logout:last-child,
+.button__sign-up:last-child {
+  margin-right: 0;
+}
+
+@media only screen and (min-width: 641px) {
+  .button__login,
+  .button__logout,
+  .button__sign-up {
+    --padding-start: 1.2rem;
+    --padding-top: 0.8rem;
+    --padding-end: 1.2rem;
+    --padding-bottom: 0.8rem;
+
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    min-width: 8.4rem;
+  }
+}

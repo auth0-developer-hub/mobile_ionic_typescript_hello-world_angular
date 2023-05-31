@@ -1,0 +1,7 @@
+{
+  "name": "mobile_ionic_typescript_hello-world_angular",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
