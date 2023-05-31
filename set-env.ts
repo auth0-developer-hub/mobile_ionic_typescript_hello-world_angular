@@ -11,6 +11,15 @@ const prodTargetPath = './src/environments/environment.prod.ts';
 
 const envConfigFile = `export const environment = {
   production: false,
+   auth0: {
+    domain: '${process.env['AUTH0_DOMAIN']}',
+    clientId: '${process.env['AUTH0_CLIENT_ID']}',
+    useRefreshTokens: true,
+    useRefreshTokensFallback: false,
+    authorizationParams: {
+      redirect_uri: '${process.env['AUTH0_CALLBACK_URL']}',
+    },
+  },
   api: {
     serverUrl: '${process.env['API_SERVER_URL']}',
   },

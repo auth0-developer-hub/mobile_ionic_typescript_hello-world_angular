@@ -4,4 +4,7 @@
     <app-mobile-nav-bar></app-mobile-nav-bar>
     <ion-router-outlet mode="ios" id="main-content"></ion-router-outlet>
   </div>
+  <ng-container *ngIf="isAuth0Loading$ | async">
+    <app-page-loader></app-page-loader>
+  </ng-container>
 </ion-app>

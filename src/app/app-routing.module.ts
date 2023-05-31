@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from '@auth0/auth0-angular';
 import { AdminComponent, HomeComponent, NotFoundComponent, ProfileComponent, ProtectedComponent, PublicComponent } from './features';
 
 const routes: Routes = [
@@ -10,7 +11,8 @@ const routes: Routes = [
   },
   {
     path: 'profile',
-    component: ProfileComponent
+    component: ProfileComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'public',
@@ -18,11 +20,13 @@ const routes: Routes = [
   },
   {
     path: 'protected',
-    component: ProtectedComponent
+    component: ProtectedComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'admin',
-    component: AdminComponent
+    component: AdminComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: '**',

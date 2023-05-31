@@ -3,12 +3,14 @@
     <ion-text><h1 id="page-title" class="content__title">Profile Page</h1></ion-text>
     <div class="content__body">
       <ion-text>
-          <p id="page-description">
-           <span
-            ><strong
-              >Only authenticated users should access this page.</strong
-            ></span
-          >
+        <p id="page-description">
+          <span>
+            You can use the <strong>ID Token</strong> to get the profile
+            information of an authenticated user.
+           </span>
+           <span>
+            <strong>Only authenticated users can access this page.</strong>
+          </span>
         </p>
       </ion-text>
       <ng-container *ngIf="user$ | async as user">

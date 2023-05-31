@@ -3,14 +3,23 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 import { COMPONENTS } from './components';
+import { LoginButtonComponent } from './components/buttons/login-button.component';
+import { LogoutButtonComponent } from './components/buttons/logout-button.component';
+import { SignupButtonComponent } from './components/buttons/signup-button.component';
 
 @NgModule({
   declarations: [
-    ...COMPONENTS
+    ...COMPONENTS,
+    LoginButtonComponent,
+    SignupButtonComponent,
+    LogoutButtonComponent
   ],
   imports: [CommonModule, RouterModule, IonicModule],
   exports: [
-    ...COMPONENTS
+    ...COMPONENTS,
+    LoginButtonComponent,
+    SignupButtonComponent,
+    LogoutButtonComponent
   ],
 })
 export class SharedModule {}
